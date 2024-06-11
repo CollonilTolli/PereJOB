@@ -1,0 +1,21 @@
+.Button {
+  padding: 18px 32px;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  background-color: var(--accent2);
+  color: var(--font);
+  border-radius: 12px;
+  border: 0;
+  outline: none;
+  transition: .4s ease;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--accent1);
+  }
+
+  &:active {
+    background-color: var(--accent3);
+  }
+}

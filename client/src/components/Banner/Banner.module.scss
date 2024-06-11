@@ -1,0 +1,133 @@
+.Container {
+  height: 80vh;
+  background-color: var(--secondbg);
+  position: relative;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    background-image: url('/Vawe.png');
+    transform: rotate(180deg);
+    background-repeat: repeat-x;
+    width: 200vw;
+    height: 220px;
+    background-size: 50%;
+    animation: Vawe 30s ease infinite;
+    z-index: 1;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    background-image: url('/Vawe.png');
+    background-repeat: repeat-x;
+    width: 200vw;
+    height: 220px;
+    background-size: 50%;
+    animation: Vawe 30s ease infinite;
+    z-index: 3;
+  }
+
+  .Content {
+    max-width: 1660px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 100px;
+      height: 200px;
+      animation: toBefore 15s ease infinite alternate;
+      padding: 36px 36px 0 36px;
+      background-color: var(--accent1);
+      overflow: hidden;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 4;
+      width: 200px;
+      height: 100px;
+      animation: toBefore 10s ease infinite alternate;
+      padding: 36px 36px 0 36px;
+      background-color: var(--main);
+      overflow: hidden;
+
+    }
+
+    @keyframes toBefore {
+      0% {
+        border-radius: 14% 60% 29% 40% / 18% 24% 76% 43%;
+      }
+
+      49% {
+        border-radius: 59% 26% 79% 14% / 48% 24% 41% 43%;
+      }
+
+      100% {
+        border-radius: 43% 41% 46% 54% / 27% 24% 76% 73%;
+      }
+    }
+
+    img {
+      position: absolute;
+      z-index: 2;
+      bottom: 0;
+      left: 0;
+    }
+
+    .TextBlock {
+      max-width: 50%;
+
+      .Title {
+        font-size: 60px;
+        font-weight: 700;
+        color: var(--font);
+      }
+
+      .Seporator {
+        width: 74px;
+        height: 6px;
+        border-radius: 12px;
+        background-color: var(--main);
+        margin: 18px 0;
+      }
+
+      .Description {
+        font-size: 20px;
+        font-weight: 400;
+        color: (--font);
+      }
+    }
+  }
+}
+
+@keyframes Vawe {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 100% 0;
+  }
+}

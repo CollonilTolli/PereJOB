@@ -1,0 +1,22 @@
+.Card {
+  max-width: 33.33%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+
+  .Image {
+    padding: 150px;
+    position: relative;
+    width: fit-content;
+    border-radius: 50%;
+  }
+
+  .Text {
+    font-size: 18px;
+    line-height: 150%;
+    text-align: center;
+    font-weight: 700;
+  }
+}

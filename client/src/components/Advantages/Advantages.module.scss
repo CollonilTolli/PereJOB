@@ -1,0 +1,29 @@
+.Content {
+  max-width: 1660px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 36px 0;
+
+  .Title {
+    font-size: 60px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 50%;
+  }
+
+  .Seporator {
+    width: 74px;
+    height: 6px;
+    border-radius: 12px;
+    background-color: var(--main);
+    margin: 18px auto;
+  }
+
+  .Cards {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 18px 0;
+  }
+}
