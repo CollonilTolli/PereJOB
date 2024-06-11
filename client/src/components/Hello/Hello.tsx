@@ -21,8 +21,6 @@ export default function Hello() {
     <div className={css.Container}>
       <Particles
         id="tsparticles"
-        /* eslint-disable */
-        /* ts-ignore */
         options={ParticleConfig}
         init={particlesInit}
         loaded={particlesLoaded}
