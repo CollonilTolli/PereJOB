@@ -6,7 +6,7 @@ import Image from "next/image";
 import Particles from "react-tsparticles";
 import { useCallback } from "react";
 import { loadSlim } from "tsparticles-slim";
-import ParticleConfig from "/public/particlesjs-config.json";
+import ParticleConfig from "./ParticleConfig";
 
 export default function Hello() {
   const particlesInit = useCallback(async (engine: any) => {
@@ -21,6 +21,8 @@ export default function Hello() {
     <div className={css.Container}>
       <Particles
         id="tsparticles"
+        /* eslint-disable */
+        /* ts-ignore */
         options={ParticleConfig}
         init={particlesInit}
         loaded={particlesLoaded}
