@@ -2,11 +2,11 @@
 import css from "./Hello.module.scss";
 import Logo from "/public/images/logo.svg";
 import Button from "../ui/Button/Button";
-import Image from "next/image";
-import Particles from "react-tsparticles";
-import { useCallback } from "react";
-import { loadSlim } from "tsparticles-slim";
 import ParticleConfig from "./ParticleConfig";
+import Image from "next/image";
+import { useCallback } from "react";
+import Particles from "react-tsparticles";
+import { loadSlim } from "tsparticles-slim";
 
 export default function Hello() {
   const particlesInit = useCallback(async (engine: any) => {
