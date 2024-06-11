@@ -6,19 +6,19 @@ const nextConfig = {
     typedRoutes: true,
     // scrollRestoration: true,
   },
-  images: { domains: ['images.clerk.dev'] },
+  images: { domains: ["images.clerk.dev"] },
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/i,
       issuer: /\.[jt]sx?$/,
       use: [
         {
-          loader: '@svgr/webpack',
+          loader: "@svgr/webpack",
           options: {
             svgoConfig: {
               plugins: [
                 {
-                  name: 'preset-default',
+                  name: "preset-default",
                   params: {
                     overrides: {
                       cleanupIds: false,
@@ -26,15 +26,16 @@ const nextConfig = {
                     },
                   },
                 },
-                'removeXMLNS',
+                "removeXMLNS",
               ],
             },
           },
         },
       ],
-    })
+    });
 
-    return config
+    return config;
+  },
 };
 
 export default nextConfig;
