@@ -31,17 +31,20 @@ export default function Hello() {
             <Logo />
           </div>
           <div className={css.Interactive}>
-            <Button>Начать работать</Button>
+            <Button>Узнать больше</Button>
             <Button>Войти</Button>
           </div>
         </div>
         <div className={css.Main}>
           <div className={css.TextBlock}>
-            <div className={css.Title}>Работа в перекрёстке</div>
-            <div className={css.Subtitle}>Начни работать уже завтра!</div>
+            <div className={css.Title}>Узнай больше про "Перекрёсток"</div>
+            <div className={css.Subtitle}>
+              Начни работать с нами или стань нашим партнёром уже завтра!
+            </div>
             <div className={css.Interactive}>
+              <Button>Товары</Button>
+              <Button>Партнёры</Button>
               <Button>Вакансии</Button>
-              <Button>Отзывы</Button>
             </div>
           </div>
           <div className={css.ImageBlock}>

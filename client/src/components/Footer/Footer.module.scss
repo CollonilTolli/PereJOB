@@ -1,0 +1,61 @@
+.Footer {
+  position: relative;
+  background-color: #4c4c4c;
+  margin-top: 100px;
+
+  &>img {
+    position: absolute;
+    left: 0;
+    top: -95px;
+    width: 100%;
+    filter: invert(70%);
+  }
+
+  .Content {
+    max-width: 1660px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 32px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .Logo {
+      width: 100px;
+      height: 100px;
+    }
+
+    .Interactive {
+      .Links {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 36px;
+
+        ul {
+          list-style-type: none;
+          color: #fff;
+
+          p {
+            margin-bottom: 20px;
+            color: #a2a2a2;
+          }
+
+          li {
+            margin-bottom: 12px;
+
+            a {
+              color: #fff;
+              text-decoration: none;
+              transition: .4s ease;
+
+              &:hover {
+                opacity: .7;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

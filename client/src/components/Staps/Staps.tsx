@@ -9,15 +9,15 @@ import Zoomer from "/public/images/Zoomer.png";
 export default function Staps() {
   return (
     <div className={css.Content}>
-      <div className={css.Title}>До работы мечты всего 6 шагов!</div>
+      <div className={css.Title}>До нашего партнёрства всего 6 шагов!</div>
       <div className={css.Seporator} />
       <ol className={css.Cards}>
-        <Card img={BookGirl} text="Выбор вакансии" />
-        <Card img={LaptpGirl} text="Подготовка резюме" />
-        <Card img={OrangeBoy} text="Отклик на вакансию" />
-        <Card img={OldGirl} text="Подготовка к собеседованию" />
-        <Card img={SmilyBoy} text="Прохождение собеседования" />
-        <Card img={Zoomer} text="Первый рабочий день" />
+        <Card img={BookGirl} text="Подготовь описание продукции" />
+        <Card img={LaptpGirl} text="Свяжись с нами по почте" />
+        <Card img={OrangeBoy} text="Дождись одобрения" />
+        <Card img={OldGirl} text="Согласуй условия" />
+        <Card img={SmilyBoy} text="Предоставь необходимые документы" />
+        <Card img={Zoomer} text="Зарабатывай с нами!" />
       </ol>
     </div>
   );

@@ -1,8 +1,8 @@
 .Container {
-  height: 80vh;
+
+  min-height: 80vh;
   background-color: var(--secondbg);
   position: relative;
-  min-height: 500px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -17,7 +17,7 @@
     transform: rotate(180deg);
     background-repeat: repeat-x;
     width: 200vw;
-    height: 220px;
+    height: 115px;
     background-size: 50%;
     animation: Vawe 30s ease infinite;
     z-index: 1;
@@ -31,7 +31,7 @@
     background-image: url('/Vawe.png');
     background-repeat: repeat-x;
     width: 200vw;
-    height: 220px;
+    height: 115px;
     background-size: 50%;
     animation: Vawe 30s ease infinite;
     z-index: 3;
@@ -39,6 +39,7 @@
 
   .Content {
     max-width: 1660px;
+    min-height: 700px;
     width: 100%;
     display: flex;
     align-items: center;
