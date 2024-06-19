@@ -28,10 +28,17 @@ export default function Partners() {
   return partners?.length ? (
     <div className={css.Partners}>
       <Swiper
-        slidesPerView={5}
         spaceBetween={30}
         navigation={true}
         modules={[Navigation]}
+        breakpoints={{
+            320: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 4,
+            },
+        }}
       >
         {partners.map((element: any) => (
           <SwiperSlide key={element.id}>
