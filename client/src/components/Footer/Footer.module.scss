@@ -58,4 +58,24 @@
       }
     }
   }
+  @media(max-width: 991px){
+    .Content{
+      flex-direction: column;
+      .Logo{
+        max-width: 50px;
+        object-fit: contain;
+      }
+      .Interactive .Links{
+        gap: 12px;
+        flex-direction: row;
+        width: 100%;
+        flex-wrap: wrap;
+        ul{
+          max-width: calc(50% - 30px);
+          font-size: 12px;
+          padding: 12px;
+        }
+      }
+    }
+  }
 }

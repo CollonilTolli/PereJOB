@@ -3,19 +3,29 @@
   font-size: 18px;
   letter-spacing: 0.05em;
   font-weight: 700;
-  background-color: var(--accent2);
+  background: var(--accent2);
   color: var(--font);
   border-radius: 12px;
   border: 0;
   outline: none;
-  transition: .4s ease;
+  transition: all .4s ease;
   cursor: pointer;
-
+  box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.78);
+  -webkit-box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.78);
+  -moz-box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.78);
   &:hover {
-    background-color: var(--accent1);
+    background: var(--accent1);
   }
 
   &:active {
-    background-color: var(--accent3);
+    background: var(--accent3);
+  }
+}
+
+@media(max-width: 991px){
+  .Button{
+    padding: 4px 12px;
+    font-size: 13px;
+    border-radius: 12px;
   }
 }
