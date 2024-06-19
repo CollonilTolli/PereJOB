@@ -4,7 +4,7 @@ import Staps from "@/components/Staps/Staps";
 import Banner from "@/components/Banner/Banner";
 import Vacancies from "@/components/Vacancies/Vacancies";
 import Catalog from "@/components/Catalog/Catalog";
-// import Partners from "@/components/Partners/Partners";
+import Partners from "@/components/Partners/Partners";
 import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
@@ -16,7 +16,7 @@ export default function Home() {
       <Banner />
       <Vacancies />
       <Staps />
-      {/* <Partners/> */}
+      <Partners />
       <Footer />
     </main>
   );
