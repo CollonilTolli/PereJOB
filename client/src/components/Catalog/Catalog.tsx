@@ -26,18 +26,18 @@ export default function Catalog() {
   }, []);
   console.log(catalog, "asdasdasd");
   return catalog?.length ? (
-    <div className={css.Catalog}>
+    <div className={css.Catalog} id="catalog">
       <Swiper
         spaceBetween={30}
         navigation={true}
         modules={[Navigation]}
         breakpoints={{
-            320: {
-                slidesPerView: 1,
-            },
-            768: {
-                slidesPerView: 4,
-            },
+          320: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 4,
+          },
         }}
       >
         {catalog.map((element: any) => (
@@ -46,6 +46,7 @@ export default function Catalog() {
               <Image
                 src={`${process.env.NEXT_PUBLIC_Domain}${element.photoUrl}`}
                 alt=""
+                unoptimized
                 width={200}
                 height={200}
               />

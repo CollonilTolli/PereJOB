@@ -31,8 +31,9 @@ export default function Hello() {
             <Logo />
           </div>
           <div className={css.Interactive}>
-            <Button>Узнать больше</Button>
-            <Button>Войти</Button>
+            <a href="https://ancient-renewal-9f86ea79bc.strapiapp.com/admin/">
+              <Button>Войти</Button>
+            </a>
           </div>
         </div>
         <div className={css.Main}>
@@ -42,9 +43,15 @@ export default function Hello() {
               Начни работать с нами или стань нашим партнёром уже завтра!
             </div>
             <div className={css.Interactive}>
-              <Button>Товары</Button>
-              <Button>Партнёры</Button>
-              <Button>Вакансии</Button>
+              <a href="#catalog">
+                <Button>Товары</Button>
+              </a>
+              <a href="#partners">
+                <Button>Партнёры</Button>
+              </a>
+              <a href="#vacancies">
+                <Button>Вакансии</Button>
+              </a>
             </div>
           </div>
           <div className={css.ImageBlock}>

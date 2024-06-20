@@ -26,18 +26,18 @@ export default function Vacancies() {
   }, []);
   console.log(vacancies, "asdasdasd");
   return vacancies?.length ? (
-    <div className={css.Vacancies}>
+    <div className={css.Vacancies} id="vacancies">
       <Swiper
         spaceBetween={30}
         navigation={true}
         modules={[Navigation]}
         breakpoints={{
-            320: {
-                slidesPerView: 1,
-            },
-            768: {
-                slidesPerView: 4,
-            },
+          320: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 4,
+          },
         }}
       >
         {vacancies.map(
@@ -50,6 +50,7 @@ export default function Vacancies() {
                     alt=""
                     width={200}
                     height={200}
+                    unoptimized
                   />
                   <h4 className={css.Title}>{element.name}</h4>
                   <div className={css.Salary}>
