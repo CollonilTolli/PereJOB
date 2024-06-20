@@ -44,7 +44,7 @@ export default function Partners() {
           <SwiperSlide key={element.id}>
             <div className={css.Card}>
               <Image
-                src={`${process.env.NEXT_PUBLIC_Domain}${element.photoUrl}`}
+                src={`${element.photoUrl}`}
                 alt=""
                 width={200}
                 height={200}
