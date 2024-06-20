@@ -6,7 +6,13 @@ const nextConfig = {
     typedRoutes: true,
     // scrollRestoration: true,
   },
-  images: { domains: ["images.clerk.dev", "127.0.0.1"] },
+  images: {
+    domains: [
+      "images.clerk.dev",
+      "127.0.0.1",
+      "ancient-renewal-9f86ea79bc.strapiapp.com",
+    ],
+  },
 
   webpack(config) {
     config.module.rules.push({
