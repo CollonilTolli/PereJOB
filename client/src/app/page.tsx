@@ -5,6 +5,7 @@ import Banner from "@/components/Banner/Banner";
 import Vacancies from "@/components/Vacancies/Vacancies";
 import Catalog from "@/components/Catalog/Catalog";
 import Partners from "@/components/Partners/Partners";
+import Form from "@/components/Form/Form";
 import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <Advantages />
       <Banner />
       <Vacancies />
+      <Form />
       <Staps />
       <Partners />
       <Footer />

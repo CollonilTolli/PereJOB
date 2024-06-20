@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "response_vacancies",
+  "info": {
+    "singularName": "response-vacancy",
+    "pluralName": "response-vacancies",
+    "displayName": "ResponseVacancy",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "FIO": {
+      "type": "string"
+    },
+    "ResumeLink": {
+      "type": "string"
+    },
+    "eMail": {
+      "type": "string"
+    }
+  }
+}

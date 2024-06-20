@@ -362,111 +362,6 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
-export interface ApiPartnerPartner extends Schema.CollectionType {
-  collectionName: 'partners';
-  info: {
-    singularName: 'partner';
-    pluralName: 'partners';
-    displayName: 'Partner';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    name: Attribute.String & Attribute.Required;
-    OGRN: Attribute.String;
-    INN: Attribute.String;
-    LogoType: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
-    description: Attribute.Text;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::partner.partner',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::partner.partner',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiProductProduct extends Schema.CollectionType {
-  collectionName: 'products';
-  info: {
-    singularName: 'product';
-    pluralName: 'products';
-    displayName: 'Product';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    name: Attribute.String;
-    photo: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
-    description: Attribute.Text;
-    price: Attribute.Decimal;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::product.product',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::product.product',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiVacancyVacancy extends Schema.CollectionType {
-  collectionName: 'vacancies';
-  info: {
-    singularName: 'vacancy';
-    pluralName: 'vacancies';
-    displayName: 'vacancy';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    name: Attribute.String;
-    active: Attribute.Boolean;
-    photo: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
-    postingDate: Attribute.Date;
-    description: Attribute.Text;
-    minSalary: Attribute.Integer;
-    maxSalary: Attribute.Integer;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::vacancy.vacancy',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::vacancy.vacancy',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -892,6 +787,145 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
+export interface ApiPartnerPartner extends Schema.CollectionType {
+  collectionName: 'partners';
+  info: {
+    singularName: 'partner';
+    pluralName: 'partners';
+    displayName: 'Partner';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String & Attribute.Required;
+    OGRN: Attribute.String;
+    INN: Attribute.String;
+    LogoType: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    description: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::partner.partner',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::partner.partner',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiProductProduct extends Schema.CollectionType {
+  collectionName: 'products';
+  info: {
+    singularName: 'product';
+    pluralName: 'products';
+    displayName: 'Product';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    photo: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    description: Attribute.Text;
+    price: Attribute.Decimal;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::product.product',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::product.product',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiResponseVacancyResponseVacancy
+  extends Schema.CollectionType {
+  collectionName: 'response_vacancies';
+  info: {
+    singularName: 'response-vacancy';
+    pluralName: 'response-vacancies';
+    displayName: 'ResponseVacancy';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    FIO: Attribute.String;
+    ResumeLink: Attribute.String;
+    eMail: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::response-vacancy.response-vacancy',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::response-vacancy.response-vacancy',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiVacancyVacancy extends Schema.CollectionType {
+  collectionName: 'vacancies';
+  info: {
+    singularName: 'vacancy';
+    pluralName: 'vacancies';
+    displayName: 'vacancy';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    active: Attribute.Boolean;
+    photo: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    postingDate: Attribute.Date;
+    description: Attribute.Text;
+    minSalary: Attribute.Integer;
+    maxSalary: Attribute.Integer;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::vacancy.vacancy',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::vacancy.vacancy',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -902,9 +936,6 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
-      'api::partner.partner': ApiPartnerPartner;
-      'api::product.product': ApiProductProduct;
-      'api::vacancy.vacancy': ApiVacancyVacancy;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
@@ -913,6 +944,10 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
+      'api::partner.partner': ApiPartnerPartner;
+      'api::product.product': ApiProductProduct;
+      'api::response-vacancy.response-vacancy': ApiResponseVacancyResponseVacancy;
+      'api::vacancy.vacancy': ApiVacancyVacancy;
     }
   }
 }
