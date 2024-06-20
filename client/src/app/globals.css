@@ -12,6 +12,9 @@
   padding: 0;
   scroll-behavior: smooth;
 }
+main{
+  overflow: hidden;
+}
 body {
   margin: 0;
   padding: 0;
@@ -64,17 +67,4 @@ canvas {
 }
 .count-particles {
   border-radius: 0 0 3px 3px;
-}
-.swiper-wrapper {
-  padding: 20px;
-}
-.swiper-button-prev::after,
-.swiper-button-next::after {
-  color: var(--accent1);
-}
-.swiper-button-prev::after {
-  left: 0 !important;
-}
-.swiper-button-next::after {
-  right: 0 !important;
 }

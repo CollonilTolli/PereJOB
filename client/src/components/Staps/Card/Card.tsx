@@ -5,7 +5,7 @@ export default function Card({ img, text }: { img: any; text: string }) {
   return (
     <div className={css.Card}>
       <div className={css.Image}>
-        <Image src={img} alt="" fill objectFit="contain" />
+        <Image src={img} alt="" objectFit="contain" />
       </div>
       <div className={css.Text}>
         <li>{text}</li>

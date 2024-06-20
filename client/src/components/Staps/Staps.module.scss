@@ -26,5 +26,20 @@
     justify-content: space-between;
     align-items: flex-start;
     gap: 18px 0;
+    list-style-type: none;
+  }
+  @media(max-width: 991px){
+    .Title{
+      font-size: 32px;
+      max-width: 70%;
+    }
+    .Cards{
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 16px;
+      gap: 16px;
+      align-items: stretch;
+    }
   }
 }

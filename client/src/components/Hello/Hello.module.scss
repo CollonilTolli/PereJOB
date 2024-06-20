@@ -7,8 +7,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 16px 0;
-
+    padding: 16px;
+    .Logo{
+      max-width: 200px;
+    }
     .Interactive {
       display: flex;
       gap: 16px;
@@ -19,9 +21,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 36px 0;
+    padding: 36px 16px;
     min-height: 100vh;
-    min-height: 100dvh;
 
     .TextBlock {
       display: flex;
@@ -79,6 +80,46 @@
         height: 100%;
       }
     }
+    @media(max-width: 991px){
+      padding-top: 0;
+      padding: 0 12px 20px 12px;
+      min-height: 520px;
+      height: calc(70vh - 52px);
+      .TextBlock {
+        .Title {
+          max-width: 100%;
+          font-size: 32px;
+        }
+        .Subtitle{
+          font-size: 18px;
+        }
+        &:before{
+          margin: 5px;
+        }
+        .Interactive{
+          margin-top: 20px;
+        }
+      }
+      .ImageBlock{
+        padding: 0;
+        margin-top: 30px;
+      }
+    }
+  }
+  @media(max-width: 991px){
+    .Header{
+      padding: 10px;
+      .Logo{
+        height: 25px;
+        svg{
+          max-width: 120px;
+          height: 30px;
+        }
+      }
+      .Interactive{
+        gap: 4px;
+      }
+    }
   }
 }
 
@@ -95,3 +136,4 @@
     border-radius: 43% 41% 46% 54% / 27% 24% 76% 73%;
   }
 }
+

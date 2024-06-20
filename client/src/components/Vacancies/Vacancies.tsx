@@ -28,10 +28,17 @@ export default function Vacancies() {
   return vacancies?.length ? (
     <div className={css.Vacancies}>
       <Swiper
-        slidesPerView={2}
         spaceBetween={30}
         navigation={true}
         modules={[Navigation]}
+        breakpoints={{
+            320: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 4,
+            },
+        }}
       >
         {vacancies.map(
           (element: any) =>
